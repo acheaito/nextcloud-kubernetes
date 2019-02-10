@@ -6,6 +6,7 @@ A [NextCloud](https://nextcloud.com/) Kubernetes deployment with Apache, MariaDB
 * A kubernetes storage manager (I user [OpenEBS](https://www.openebs.io/) installed via Rancher catalog)
 * [Kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
 * [Kustomize](https://github.com/kubernetes-sigs/kustomize)
+* An HTTPS enabled proxy in front of the k8s cluster (e.g: [nginx with Let's Encrypt](https://www.nginx.com/blog/free-certificates-lets-encrypt-and-nginx/))
 
 ## Deployment
 * Update mariadb/secret.yaml with MYSQL_PASSWORD and MYSQL_ROOT_PASSWORD (can be set to anything, must be base64 encoded) 
@@ -15,4 +16,5 @@ A [NextCloud](https://nextcloud.com/) Kubernetes deployment with Apache, MariaDB
         `kustomize build -o final-deployment.yaml` 
 * Run the following command to build and deploy
 
-        kustomize build | kubectl apply -f - 
+        kustomize build | kubectl apply -f -
+         
