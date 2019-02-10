@@ -13,4 +13,4 @@ A [NextCloud](https://nextcloud.com/) Kubernetes deployment with Apache, MariaDB
         `kustomize build -o final-deployment.yaml` 
 * Run the following command to build and deploy
 
-        `kustomize build | kubectl apply -f -` 
+        kustomize build | kubectl apply -f - 
