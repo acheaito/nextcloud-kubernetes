@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    component: redis
+  name: redis
+spec:
+  selector:
+    matchLabels:
+      component: redis
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        component: redis
+    spec:
+      containers:
+        - image: redis:alpine
+          name: redis
+          ports:
+            - containerPort: 6379
+      restartPolicy: Always
