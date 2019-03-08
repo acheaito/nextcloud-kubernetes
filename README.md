@@ -1,5 +1,5 @@
 # Kubernetes NextCloud
-A [NextCloud](https://nextcloud.com/) Kubernetes deployment with Apache, MariaDB, Cron, and Redis.
+A [NextCloud](https://nextcloud.com/) Kubernetes deployment with Apache, MariaDB, Cron, and Redis. For more context around the code, see [my article on Medium](https://medium.com/@acheaito/nextcloud-on-kubernetes-19658785b565)
 
 ## Requirements
 * A functional k8s cluster (I used [Rancher](https://rancher.com/what-is-rancher/overview/) to set up mine)
